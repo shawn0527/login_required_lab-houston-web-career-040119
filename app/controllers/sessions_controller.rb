@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     if current_user == nil || current_user.empty?
       redirect_to login_path
     else
-      redirect_to
+      redirect_to secrets_show_path
     end
   end
 
