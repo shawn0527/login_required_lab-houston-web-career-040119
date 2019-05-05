@@ -3,10 +3,7 @@ class SessionsController < ApplicationController
   def new
   end
 
-  def
-
-  def show
-    
+  def show    
   end
 
   def create
