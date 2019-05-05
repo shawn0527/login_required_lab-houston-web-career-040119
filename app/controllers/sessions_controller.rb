@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
 
   def create
     session[:name] = params[:name]
-    if session[:name] == nil || current_user.empty?
+    if session[:name] == nil || session[:name].empty?
       redirect_to login_path
     else
       redirect_to secrets_show_path
