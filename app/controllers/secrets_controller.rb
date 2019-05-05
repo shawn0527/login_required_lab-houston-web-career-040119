@@ -1,7 +1,7 @@
 class SecretsController < SessionsController
   before_action :require_login
   def show
-    if session[:name] == nil || session[:name].empty?
+    if session.include? :name == false
       redirect_to login_path
     end
   end
