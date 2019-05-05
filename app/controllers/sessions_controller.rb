@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     if current_user == nil || current_user.empty?
       redirect_to login_path
     else
-      render :show
+      redirect_to
     end
   end
 
