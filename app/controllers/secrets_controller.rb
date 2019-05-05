@@ -3,6 +3,7 @@ class SecretsController < SessionsController
   def show
     unless session[:name]
       redirect_to login_path
+    end
   end
 
   private
