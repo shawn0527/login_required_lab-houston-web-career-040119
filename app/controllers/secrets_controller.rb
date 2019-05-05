@@ -10,7 +10,8 @@ class SecretsController < SessionsController
 
   def require_login
     if session[:name] == nil || session[:name].empty?
-    return head(:forbidden)
-    redirect_to login_path
+      return head(:forbidden)
+      redirect_to login_path
+    end
   end
 end
