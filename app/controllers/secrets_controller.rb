@@ -1,6 +1,8 @@
 class SecretsController < SessionsController
   before_action :require_login
   def show
+    unless session[:name]
+      redirect_to login_path
   end
 
   private
