@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   end
 
   def create
-    current_user = params[:name]
+    session[:name] = params[:name]
     if current_user == nil || current_user.empty?
       redirect_to login_path
     else
