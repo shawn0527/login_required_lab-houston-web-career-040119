@@ -9,6 +9,7 @@ class SecretsController < SessionsController
   private
 
   def require_login
+    if session[:name]
     return head(:forbidden) unless session.include? :name
   end
 end
